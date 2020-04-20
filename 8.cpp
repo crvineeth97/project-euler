@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <math.h>
+#define ull unsigned long long
 int main()
 {
-    int t;
-    scanf("%d", &t);
+    ull t;
+    scanf("%llu", &t);
     while (t--)
     {
-        int n, k;
-        scanf("%d %d", &n, &k);
+        ull n, k;
+        scanf("%llu %llu", &n, &k);
         char str[1005];
         scanf("%s", str);
-        int i, j, ans, max = 0;
+        ull i, j, ans, max = 0;
         for (i = 0; i <= n - k; i++)
         {
             ans = 1;
@@ -21,7 +22,7 @@ int main()
             if (max < ans)
                 max = ans;
         }
-        printf("%d\n", max);
+        printf("%llu\n", max);
     }
     return 0;
 }
